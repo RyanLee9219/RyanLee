@@ -41,6 +41,9 @@ nav .logo {
     font-weight: bold;
     color: #e0e1dd;
 }
+.menu-toggle {
+    display: none; 
+}
 
 nav ul {
     list-style: none;
@@ -60,14 +63,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 1em;
 }
-nav .menu-toggle {
-    display: none; 
-    font-size: 1.5em;
-    background: none;
-    border: none;
-    color: #e0e1dd;
-    cursor: pointer;
-}
+
 
 nav ul.show {
     display: flex;
@@ -374,14 +370,36 @@ footer p{
         display: block;
         position: relative;
     }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.5em;
+        background-color: black; /* 배경 색상 */
+        border: none;
+        color: #e0e1dd; /* 텍스트 색상 */
+        cursor: pointer;
+        position: fixed;
+        right: 20px; /* 화면 오른쪽에서 20px 떨어진 위치 */
+        bottom: 10px;
+    }
+
     nav ul {
+        display: none; 
         flex-direction: column;
-        gap: 10px;
-        top: 60px;
-        left: 0;
+        align-items: center;
+        gap: 10px; 
+        position: absolute;
+        top: 60px; /* 버튼 아래 위치 */
         right: 0;
-        background-color: rgba(0, 0, 0, 0.2);
-        padding: 10px;
+        background-color: #000000;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 2000;
+    }
+
+    nav ul.show {
+        display: flex; 
     }
 
     nav ul li {
@@ -392,9 +410,6 @@ footer p{
         font-size: 1.2em;
     }
 
-    nav ul.show {
-        display: flex;
-    }
 
     #home {
         padding: 120px 20px 20px; 
@@ -440,9 +455,6 @@ footer p{
         z-index: 2010; /* 모바일에서도 모달 콘텐츠의 z-index 설정 */
     }
 
-    .menu-toggle {
-        display: block; 
-    }
     .skill-icons {
         display: flex;
         flex-wrap: wrap; /* 줄바꿈 설정 */

@@ -50,7 +50,7 @@
 <header>
     <nav>
         <div class="logo">Ryan Jooyong Lee&lt;/&gt;</div>
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -213,6 +213,16 @@
             header.classList.remove('shrink');
         }
     });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+    
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+        });
+    }); 
 </script>
 
 <footer>
