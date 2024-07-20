@@ -432,6 +432,30 @@ footer p{
         padding: 8px;
         font-size: 0.9em;
     }
+    .modal {
+        z-index: 2000; /* 모바일에서도 모달의 z-index 설정 */
+    }
+
+    .modal-content {
+        z-index: 2010; /* 모바일에서도 모달 콘텐츠의 z-index 설정 */
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+    .skill-icons {
+        display: flex;
+        flex-wrap: wrap; /* 줄바꿈 설정 */
+        justify-content: center; /* 중앙 정렬 */
+        gap: 10px; 
+        overflow: hidden; /* 아이콘이 화면 밖으로 넘어가지 않도록 설정 */
+    }
+
+    .skill-icons img {
+        width: 30px; /* 모바일에서는 아이콘 크기 줄이기 */
+        height: 30px; 
+    }
+
 }
 
 
