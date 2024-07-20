@@ -160,6 +160,9 @@ section {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
+    max-width: 100%; 
+    overflow: hidden; 
 }
 
 .profile-photo-container {
@@ -193,13 +196,16 @@ section {
 
 .skill-icons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     gap: 20px;
+    width: 100%; 
 }
 
 .skill-icons img {
     width: 40px; 
     height: 40px; 
+    max-width: 100%; 
 }
 
 .skill-icons i {
@@ -296,7 +302,7 @@ form button:hover {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
