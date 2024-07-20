@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Lee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        /* Custom style for skill icons */
+        .skill-icons img,
+        .skill-icons i {
+            width: 40px; 
+            height: 40px; 
+        }
+
+        /* Social media icons style */
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            font-size: 24px;
+            color: #333; 
+        }
+
+        /* Custom colors for social icons */
+        .social-icons a.instagram {
+            color: #e4405f; 
+        }
+
+        .social-icons a.linkedin {
+            color: #0077b5; 
+        }
+
+        .social-icons a.github {
+            color: white;
+        }
+
+        .social-icons a.facebook{
+            color: darkblue;
+        }
+
+     
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Ryan Jooyong Lee&lt;/&gt;</div>
+        <button class="menu-toggle">☰</button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="container home-content">
+        <h1 class="hello-world">Welcome to my World! &lt;/&gt;</h1>
+        <p>Delve into my journey through code and creativity.</p>
+        <a href="#about" class="btn">Discover More</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <div class="profile-photo-container">
+                <img src="assets/pro1.jpg" alt="Your Photo" class="profile-photo">
+            </div>
+            <div class="bio">
+                <h2>Hi, I'm Ryan Lee!</h2>
+                <p>Hello! I'm Ryan, originally from South Korea and currently based in Ottawa, Canada. I am pursuing an advanced diploma in Computer Engineering Technology - Computing Science at Algonquin College, driven by my passion for the IT industry. Programming and creating applications are my creative outlets, complemented by a keen interest in network engineering and cybersecurity.</p>
+                <p>Before embarking on my computer science journey, I spent a decade as a chef, three years as a butcher, and proudly served as a sergeant in the Republic of Korea Army. These diverse roles have honed my problem-solving abilities, dedication, and integrity, making me a resilient team player ready to thrive in any challenge. </p>
+                <p>Outside of academics, I volunteer in the kitchen at my church's cafeteria on weekends, and I also assist in managing the webpage. My hobbies include cooking and reading, activities that continue to inspire and motivate me.</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ryan_jjyong/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ryan-lee-57163a287/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/RyanLee9219" target="_blank" class="github"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.facebook.com/chefjooyong" target="_blank" class="facebook"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <div class="skill-icons">
+                <img src="assets/java.png" alt="java Icon">
+                <img src="assets/python.png" alt="python Icon">
+                <img src="assets/c.png" alt="C Icon">
+                <img src="assets/c-sharp.png" alt="C# Icon">
+                <img src="assets/js.png" alt="js Icon">
+                <img src="assets/html.png" alt="html Icon">
+                <img src="assets/css.png" alt="Css Icon">
+                <img src="assets/linux.png" alt="linux Icon">
+                <img src="assets/mysql.png" alt="mysql Icon">
+                <img src="assets/git.png" alt="git Icon">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h1>Projects</h1>
+        <div class="project-grid">
+            <div class="project" onclick="openModal('modal1')">
+                <h2>To Do List App</h2>
+                <p>Desktop To-Do list app with Java!</p>
+            </div>
+            <div class="project" onclick="openModal('modal2')">
+                <h2>Youtube Playlist Manager</h2>
+                <p>Save your favorite videos!</p>
+            </div>
+            <div class="project" onclick="openModal('modal3')">
+                <h2>Mp3 Music Player</h2>
+                <p>Desktop Music player app!</p>
+            </div>
+            <div class="project" onclick="openModal('modal4')">
+                <h2>Password Checker</h2>
+                <p>Check your password! Protect your information!</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <div class="container">
+        <h1>Contact</h1>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>To Do List App</h2>
+        <img src="assets/project1.jpg">
+        <p>It's a ToDo List app that anyone can use.</p>
+        <p>Create and manage your to-do lists easily!</p>
+        <p>I implemented the program using JavaFX, and decorated the GUI with CSS to make it more friendly. In addition, the list created by connecting to the database with SQLite is saved in the database, so even if the program is closed, it is saved and no data is lost.</p>
+        <p>Language Used: JavaFX, CSS and SQLite</p>
+        <a href="https://github.com/RyanLee9219/ToDoList">Click to Visit Github!</a>
+
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Youtube Playlist Manager</h2>
+        <img src="assets/project2.jpg" alt="Project 2 Photo">
+        <p>Create your customized Youtube playlist!</p>
+        <p>Copy, save, and organize your favorite, long-watched, and archived Youtube videos into a list! Tap on the saved list to access your web browser and easily watch your favorite videos. You can also tap the Chrome button to view them in the Google Chrome browser experience. JavaFX with socket Programming was used to build the program, implement GUI functions, and connect to the database, and CSS was used to make it user-friendly, and SQLite was used to implement the database. 
+        </p>
+        <p>Language Used: JavaFX(Java), CSS, SQLite</p>
+        <a href="https://github.com/RyanLee9219/YoutubeManager">Click to Visit Github!</a>
+
+
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Mp3 Music Player</h2>
+        <img src="assets/project3.jpg" alt="Project 3 Photo">
+        <p>Do you like music? Then give it a try!</p>
+        <p>A simple but full-featured Desktop MP3 Player!</p>
+        <p>This is the mp3 player we all used as kids. Once you move a file by drag and drop, it will automatically change to the absolute path to add it to the list, and you can easily add and delete lists with the Add and Remove buttons. There is a playlist function, and music is generated when you play the added mp3 file. When the music is played, you can see the music being played and adjust the music duration with the slider. The added music lists are managed in a database, so the lists are saved and remain even after the program is closed. Play, Pause, Stop, Prev, and Forward functions are available.
+            I used Java (JavaFX) to implement the program functions, GUI, and database connection, CSS for color and design, and Sqlite to implement the database.</p>
+        <p>Language Used: Java(JavaFX), CSS, SQLite.</p>
+        <a href="https://github.com/RyanLee9219/PCMp3Player">Click to Visit Github!</a>
+
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Password Checker</h2>
+        <img src="assets/project4.png" alt="Project 4 Photo">
+        <p>You must check your password frequently. If your passwords are leaked when you check with this program. You should change them right now!</p>
+        <p>Using Python 3, this program leverages the hashlib library to securely check if a given password has been previously compromised. By employing the SHA-1 hashing algorithm, user passwords are converted to SHA-1 hexadecimal format, ensuring data integrity and confidentiality. Utilizing the Have I Been Pwned API, the program checks if the hashed password matches any known compromised passwords. This approach allows users to verify their passwords without encountering barriers, providing an added layer of security in password management.</p>
+        <p>Language Used: Python3</p>
+        <a href="https://github.com/RyanLee9219/PasswordChecker">Click to Visit Github!</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    document.addEventListener('scroll', function() {
+        var header = document.querySelector('header');
+        if (window.scrollY > 100) { 
+            header.classList.add('shrink');
+        } else {
+            header.classList.remove('shrink');
+        }
+    });
+</script>
+
+<footer>
+    <p>&copy; 2024 Ryan Jooyong Lee. All rights reserved.</p>
+</footer>
+</body>
+</html>
