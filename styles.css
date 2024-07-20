@@ -456,6 +456,26 @@ footer p{
         height: 30px; 
     }
 
+    form button {
+        background-color: #1f6a9c; 
+        color: #e0e1dd; 
+        border: none;
+        padding: 12px 24px; 
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 0.9em; 
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        display: block; 
+        margin: 0 auto; /* middle */
+        width: 400px; 
+    }
+    
+    form button:hover {
+        background-color: #007acc; 
+    }
+
 }
 
 
@@ -485,6 +505,26 @@ footer p{
         font-size: 2.5em; 
         padding: 0 15px; 
     }
+
+    form button {
+        background-color: #1f6a9c; 
+        color: #e0e1dd; 
+        border: none;
+        padding: 12px 24px; 
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 0.9em; 
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        display: block; 
+        margin: 0 auto; /* middle */
+        width: 400px; 
+    }
+    
+    form button:hover {
+        background-color: #007acc; 
+    }
 }
 
 /* pad size */
@@ -510,6 +550,25 @@ footer p{
     .hello-world {
         font-size: 2.7em; 
         padding: 0 20px; 
+    }
+    form button {
+        background-color: #1f6a9c; 
+        color: #e0e1dd; 
+        border: none;
+        padding: 12px 24px; 
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 0.9em; 
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        display: block; 
+        margin: 0 auto; /* middle */
+        width: 400px; 
+    }
+    
+    form button:hover {
+        background-color: #007acc; 
     }
 
 }
